@@ -1,0 +1,19 @@
+{
+  "name": "d2ool",
+  "version": "0.0.1",
+  "author": {
+    "name": "kun huang",
+    "email": "kunhuang09@gmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.3.4",
+    "nunjucks": "*",
+    "imagemagick": "~0.1.3",
+    "node-static": "~0.7.0",
+    "formidable": "~1.0.14"
+  }
+}

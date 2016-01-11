@@ -1,0 +1,103 @@
+$open_x = 0px;
+$open_y = 160px;
+$open_offset_x = 0px;
+$open_offset_y = -160px;
+$open_width = 40px;
+$open_height = 40px;
+$open_total_width = 40px;
+$open_total_height = 320px;
+$open_image = '../img/tools.png';
+$open = 0px 160px 0px -160px 40px 40px 40px 320px '../img/tools.png';
+$download_x = 0px;
+$download_y = 40px;
+$download_offset_x = 0px;
+$download_offset_y = -40px;
+$download_width = 40px;
+$download_height = 40px;
+$download_total_width = 40px;
+$download_total_height = 320px;
+$download_image = '../img/tools.png';
+$download = 0px 40px 0px -40px 40px 40px 40px 320px '../img/tools.png';
+$text_x = 0px;
+$text_y = 280px;
+$text_offset_x = 0px;
+$text_offset_y = -280px;
+$text_width = 40px;
+$text_height = 40px;
+$text_total_width = 40px;
+$text_total_height = 320px;
+$text_image = '../img/tools.png';
+$text = 0px 280px 0px -280px 40px 40px 40px 320px '../img/tools.png';
+$cog_x = 0px;
+$cog_y = 0px;
+$cog_offset_x = 0px;
+$cog_offset_y = 0px;
+$cog_width = 40px;
+$cog_height = 40px;
+$cog_total_width = 40px;
+$cog_total_height = 320px;
+$cog_image = '../img/tools.png';
+$cog = 0px 0px 0px 0px 40px 40px 40px 320px '../img/tools.png';
+$point_x = 0px;
+$point_y = 200px;
+$point_offset_x = 0px;
+$point_offset_y = -200px;
+$point_width = 40px;
+$point_height = 40px;
+$point_total_width = 40px;
+$point_total_height = 320px;
+$point_image = '../img/tools.png';
+$point = 0px 200px 0px -200px 40px 40px 40px 320px '../img/tools.png';
+$ink_x = 0px;
+$ink_y = 80px;
+$ink_offset_x = 0px;
+$ink_offset_y = -80px;
+$ink_width = 40px;
+$ink_height = 40px;
+$ink_total_width = 40px;
+$ink_total_height = 320px;
+$ink_image = '../img/tools.png';
+$ink = 0px 80px 0px -80px 40px 40px 40px 320px '../img/tools.png';
+$move_x = 0px;
+$move_y = 120px;
+$move_offset_x = 0px;
+$move_offset_y = -120px;
+$move_width = 40px;
+$move_height = 40px;
+$move_total_width = 40px;
+$move_total_height = 320px;
+$move_image = '../img/tools.png';
+$move = 0px 120px 0px -120px 40px 40px 40px 320px '../img/tools.png';
+$ruler_x = 0px;
+$ruler_y = 240px;
+$ruler_offset_x = 0px;
+$ruler_offset_y = -240px;
+$ruler_width = 40px;
+$ruler_height = 40px;
+$ruler_total_width = 40px;
+$ruler_total_height = 320px;
+$ruler_image = '../img/tools.png';
+$ruler = 0px 240px 0px -240px 40px 40px 40px 320px '../img/tools.png';
+
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}

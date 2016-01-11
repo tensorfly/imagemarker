@@ -1,0 +1,246 @@
+@import "icons_positions"
+@import "tools_positions"
+html, body
+    width: 100%;
+    height: 100%;
+body
+    box-sizing: border-box;
+    background: gray;
+    position: relative;
+
+.unselectable
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+.selectable
+    -moz-user-select: text;
+    -khtml-user-select: text;
+    -webkit-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+
+#nav_bar
+    position: relative;
+    z-index: 1000;
+    .navbar-inner
+        border-color: #000;
+        .info-banner
+            width : 200px;
+            height: 40px;
+            overflow: hidden;
+            background: blue;
+        a.menu-btn-setting
+            padding: 0px;
+            spriteImage($cog)
+            spritePosition($cog)
+            width: 40px;
+            height: 40px;
+    .help
+        font-size: 18px;
+.alert-wrapper
+    position: absolute;
+    left: 42px;
+    right: 0px;
+    top: 41px;
+    z-index: 1000;
+    .alert
+        border-radius: 0px;
+        padding: 4px 35px;
+        font-size: 12px;
+        text-align: center;
+.controls
+    width: 42px;
+    position: absolute;
+    left: 0px;
+    top: 41px;
+    bottom: 0px;
+    background: #000;
+    //background: #606060;
+    z-index: 1000;
+    .top-btns 
+        padding-top: 5px;
+    .bottom-btns
+        position: absolute;
+        bottom: 0px;
+    .tool-btn, .btn-download, .btn-open  
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    .tool-btn-point
+        spriteImage($point)
+        spritePosition($point)
+    .tool-btn-color
+        spriteImage($ink)
+        spritePosition($ink)
+    .tool-btn-ruler
+        spriteImage($ruler)
+        spritePosition($ruler)
+    .tool-btn-text
+        spriteImage($text)
+        spritePosition($text)
+    .tool-btn-select
+        spriteImage($move)
+        spritePosition($move)
+    .tool-btn-current
+        background-color: #fff;
+    .btn-open
+        spriteImage($open)
+        spritePosition($open)
+        input
+            display:block;opacity:0;
+    .btn-download
+        spriteImage($download)
+        spritePosition($download)
+.scene
+    position: absolute;
+    left : 0px;
+    right : 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow:  hidden;
+    .dropbox
+        font-size: 32px;
+        text-align: center;
+        background: #fff;
+
+    .scene-inner
+        position: absolute;
+        canvas, svg, .input-layer, .shadow-layer, .cover
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+
+    .shadow-layer
+        overflow: hidden;
+        .select-box
+            position: absolute;
+            background: rgba(0,0,0,0);
+            .select-anchor
+                display: none;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                border-radius: 5px;
+
+    .shadow-layer-select-mode
+        cursor: move;
+        .select-box:hover
+            background: rgba(0,0,0,0);  
+            .select-anchor
+                display: block;
+                background: #00f;
+        .select-box-active
+            .select-anchor
+                display: block;
+                background: #000;
+            .note-select-box-inner
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,255,0.4);
+            .focus-select-box-inner
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,255,0.4);
+        .note-select-box:hover
+            background: rgba(0,0,255,0.4);
+        .textarrow-select-box.select-box-active
+            background: rgba(0,0,255,0.4);
+    .input-layer
+        .text-input
+            background-color: #fff;
+            background-color: rgba(255,255, 255, 0.4);
+            display: block;
+            position: absolute;
+            overflow: hidden
+
+.setting-pannel-dropdown 
+    #setting_pannels
+        display:none;
+        position: fixed; 
+        right: 0px; 
+        width: 230px;
+        transition: top 0.3s ease-in-out; 
+        z-index: 0;
+.setting-pannel-dropdown.open
+    .menu-btn-setting
+        background-color: #000;
+    #setting_pannels
+        display:block;
+        top: 41px;
+
+#pannels_inner
+    background: red;
+    padding-left: 10px;
+    padding: 8px 10px;
+    background-color: #999;
+    position: relative;
+
+.setting-wrapper
+    //margin-bottom: 0;
+    //border: none;
+    //border-bottom: 1px solid black;
+    border-color: #000;
+    border-radius: 0px;
+    background: #eee;
+
+.color-picker-wrapper
+    height: auto;
+
+.expand-color-pick-wrapper
+    height: 180px;
+
+.compass
+    width: 90px;
+    height:75px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    background: #000;
+    background-color: rgba(0,0,0,0.3);
+    transition: right 0.3s, bottom 0.3s;
+    .toggle-compass
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border: 6px solid #000;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        width: 0px;
+        height: 0px;
+        cursor: pointer;
+    .compass-btn
+        position: absolute;
+        cursor: pointer;
+    .compass-btn-0
+        sprite($reset)
+    .compass-btn-1
+        sprite($up)
+    .compass-btn-2
+        sprite($right)
+    .compass-btn-3
+        sprite($down)
+    .compass-btn-4
+        sprite($left)
+    .compass-btn-zoom
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+    .compass-btn-zoomin
+        sprite($zoomin)
+    .compass-btn-zoomout
+        sprite($zoomout)
+
+.compass-hide
+    background-color: rgba(0,0,0,0);
+    right: -78px;
+    bottom: -63px;
+    .toggle-compass
+        border-color: #000;
+        border-left-color: transparent;
+        border-top-color: transparent;

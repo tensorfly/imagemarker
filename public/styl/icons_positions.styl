@@ -1,0 +1,93 @@
+$down_x = 0px;
+$down_y = 0px;
+$down_offset_x = 0px;
+$down_offset_y = 0px;
+$down_width = 16px;
+$down_height = 16px;
+$down_total_width = 16px;
+$down_total_height = 112px;
+$down_image = '../img/icons.png';
+$down = 0px 0px 0px 0px 16px 16px 16px 112px '../img/icons.png';
+$left_x = 0px;
+$left_y = 16px;
+$left_offset_x = 0px;
+$left_offset_y = -16px;
+$left_width = 16px;
+$left_height = 16px;
+$left_total_width = 16px;
+$left_total_height = 112px;
+$left_image = '../img/icons.png';
+$left = 0px 16px 0px -16px 16px 16px 16px 112px '../img/icons.png';
+$up_x = 0px;
+$up_y = 64px;
+$up_offset_x = 0px;
+$up_offset_y = -64px;
+$up_width = 16px;
+$up_height = 16px;
+$up_total_width = 16px;
+$up_total_height = 112px;
+$up_image = '../img/icons.png';
+$up = 0px 64px 0px -64px 16px 16px 16px 112px '../img/icons.png';
+$zoomin_x = 0px;
+$zoomin_y = 80px;
+$zoomin_offset_x = 0px;
+$zoomin_offset_y = -80px;
+$zoomin_width = 16px;
+$zoomin_height = 16px;
+$zoomin_total_width = 16px;
+$zoomin_total_height = 112px;
+$zoomin_image = '../img/icons.png';
+$zoomin = 0px 80px 0px -80px 16px 16px 16px 112px '../img/icons.png';
+$reset_x = 0px;
+$reset_y = 32px;
+$reset_offset_x = 0px;
+$reset_offset_y = -32px;
+$reset_width = 16px;
+$reset_height = 16px;
+$reset_total_width = 16px;
+$reset_total_height = 112px;
+$reset_image = '../img/icons.png';
+$reset = 0px 32px 0px -32px 16px 16px 16px 112px '../img/icons.png';
+$right_x = 0px;
+$right_y = 48px;
+$right_offset_x = 0px;
+$right_offset_y = -48px;
+$right_width = 16px;
+$right_height = 16px;
+$right_total_width = 16px;
+$right_total_height = 112px;
+$right_image = '../img/icons.png';
+$right = 0px 48px 0px -48px 16px 16px 16px 112px '../img/icons.png';
+$zoomout_x = 0px;
+$zoomout_y = 96px;
+$zoomout_offset_x = 0px;
+$zoomout_offset_y = -96px;
+$zoomout_width = 16px;
+$zoomout_height = 16px;
+$zoomout_total_width = 16px;
+$zoomout_total_height = 112px;
+$zoomout_image = '../img/icons.png';
+$zoomout = 0px 96px 0px -96px 16px 16px 16px 112px '../img/icons.png';
+
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}

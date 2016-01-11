@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Markable</title>
+<!--cssheets-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="inc/mincolor/jquery.minicolors.css">
+    <link rel="stylesheet" href="css/index.css">
+<!--endcssheets-->
+</head>
+<body class="unselectable">
+	<div class="navbar navbar-inverse navbar-static-top" id="nav_bar">
+      <div class="navbar-inner">
+            <a class="brand" href="#">Markable 0.0</a>
+            <ul class="nav pull-left">
+                <li class="dropdown">
+                    <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">menu <i class="caret"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                        <li><a>条目1</a></li>
+                        <li><a>条目2</a></li>
+                        <li><a>条目3</a></li>
+                        <li><a>条目4</a></li>
+                        <li class="divider"></li>
+                        <li><a>更多...</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="info-banner pull-left"><span style="line-height:40px;text-align:center; display:block">information bar</span></div>
+            <ul class="nav pull-right">
+                <li class="setting-pannel-dropdown">
+                    <a href="#" class="menu-btn menu-btn-setting have-tip" data-original-title = '设置' data-placement='bottom'></a>
+                    <div id="setting_pannels" class="setting-pannels-hide">
+                        <div class="accordion" id="pannels_inner">
+                            <div class="accordion-group setting-wrapper">
+                                <div class="accordion-heading">
+                                  <a class="accordion-toggle" data-toggle="collapse" data-target=".general-setting" data-parent="#pannels_inner">常用设置</a>
+                                </div>
+                                <div class="general-setting accordion-body collapse in">
+                                    <div class="accordion-inner">
+                                       <div class="color-pick-wrapper">标注颜色<input class="color-picker" type="hidden"/> </div>
+                                    </div>
+                                </div> 
+                            </div> 
+                            <div class="accordion-group setting-wrapper">
+                                <div class="accordion-heading">
+                                  <a class="accordion-toggle" data-toggle="collapse" data-target=".color-setting" data-parent="#pannels_inner">更多设置</a>
+                                </div>
+                                <div class="color-setting accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <div class="color-pick-wrapper">临时标注颜色<input class="tmp-color-picker" type="hidden"/> </div>
+                                        <div><label class="checkbox toggle-grid">量斜线长度<input type="checkbox"></label></div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>       
+                    </div>                
+                </li>
+                <li><a class="help have-tip" data-original-title = '使用说明' data-placement='bottom' href="/help.html" target="_blank">?</a></li>
+            </ul>
+      </div>
+    </div>
+    <div class="controls">
+    	<div class="top-btns hide">
+	    	<div class="tool-btn tool-btn-ruler have-tip" mode="1" data-original-title = '量尺[l]' data-placement='right'></div>
+	    	<div class="tool-btn tool-btn-color have-tip" mode="2" data-original-title = '取色[i]' data-placement='right'></div>
+	    	<div class="tool-btn tool-btn-point have-tip" mode="3" data-original-title = '坐标[p]' data-placement='right'></div>
+            <div class="tool-btn tool-btn-text have-tip" mode="4" data-original-title = '文字[t]' data-placement='right'></div>
+	    	<div class="tool-btn tool-btn-select have-tip" mode="5" title = '选择[v]' data-placement='right'></div>
+    	</div>
+    	<div class="bottom-btns">
+	    	<div class="btn-download hide have-tip" data-original-title = '下载[ctrl+s]' data-placement='right'></div>
+	    	<div class="btn-open have-tip" data-original-title = '打开' data-placement='right'>
+                <input id="fileupload" type="file" name="files[]" style="">                     
+            </div>
+		</div>
+    </div>
+    <div class="alert-wrapper">      
+    </div>
+    <div class="scene"></div>
+    <div class="compass hide"></div>
+
+<!--jscripts-->
+    <script src="js/lib/jquery-1.7.2.min.js"></script>
+    <script src="js/lib/jquery.mousewheel.min.js"></script>
+
+    <script src="js/lib/jquery.ui.widget.min.js"></script>
+    <script src="js/lib/jquery.iframetransport.min.js"></script>
+    <script src="js/lib/jquery.fileupload.min.js"></script>
+    
+    <script src="js/lib/raphael-min.js"></script>
+
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/bootstrap.tooltip.min.js"></script>
+
+    <script src="inc/mincolor/jquery.minicolors.min.js"></script>
+ 
+    <script src="js/core/graph.js"></script>
+    <script src="js/markable.js"></script> 
+<!--endjscripts-->
+</body>
+</html>

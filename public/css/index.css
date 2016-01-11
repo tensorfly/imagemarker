@@ -1,0 +1,312 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  box-sizing: border-box;
+  background: #808080;
+  position: relative;
+}
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.selectable {
+  -moz-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+#nav_bar {
+  position: relative;
+  z-index: 1000;
+}
+#nav_bar .navbar-inner {
+  border-color: #000;
+}
+#nav_bar .navbar-inner .info-banner {
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+  background: #00f;
+}
+#nav_bar .navbar-inner a.menu-btn-setting {
+  padding: 0px;
+  background-image: url("../img/tools.png");
+  background-position: 0px 0px;
+  width: 40px;
+  height: 40px;
+}
+#nav_bar .help {
+  font-size: 18px;
+}
+.alert-wrapper {
+  position: absolute;
+  left: 42px;
+  right: 0px;
+  top: 41px;
+  z-index: 1000;
+}
+.alert-wrapper .alert {
+  border-radius: 0px;
+  padding: 4px 35px;
+  font-size: 12px;
+  text-align: center;
+}
+.controls {
+  width: 42px;
+  position: absolute;
+  left: 0px;
+  top: 41px;
+  bottom: 0px;
+  background: #000;
+  z-index: 1000;
+}
+.controls .top-btns {
+  padding-top: 5px;
+}
+.controls .bottom-btns {
+  position: absolute;
+  bottom: 0px;
+}
+.controls .tool-btn,
+.controls .btn-download,
+.controls .btn-open {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.controls .tool-btn-point {
+  background-image: url("../img/tools.png");
+  background-position: 0px -200px;
+}
+.controls .tool-btn-color {
+  background-image: url("../img/tools.png");
+  background-position: 0px -80px;
+}
+.controls .tool-btn-ruler {
+  background-image: url("../img/tools.png");
+  background-position: 0px -240px;
+}
+.controls .tool-btn-text {
+  background-image: url("../img/tools.png");
+  background-position: 0px -280px;
+}
+.controls .tool-btn-select {
+  background-image: url("../img/tools.png");
+  background-position: 0px -120px;
+}
+.controls .tool-btn-current {
+  background-color: #fff;
+}
+.controls .btn-open {
+  background-image: url("../img/tools.png");
+  background-position: 0px -160px;
+}
+.controls .btn-open input {
+  display: block;
+  opacity: 0;
+}
+.controls .btn-download {
+  background-image: url("../img/tools.png");
+  background-position: 0px -40px;
+}
+.scene {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+.scene .dropbox {
+  font-size: 32px;
+  text-align: center;
+  background: #fff;
+}
+.scene .scene-inner {
+  position: absolute;
+}
+.scene .scene-inner canvas,
+.scene .scene-inner svg,
+.scene .scene-inner .input-layer,
+.scene .scene-inner .shadow-layer,
+.scene .scene-inner .cover {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.scene .shadow-layer {
+  overflow: hidden;
+}
+.scene .shadow-layer .select-box {
+  position: absolute;
+  background: rgba(0,0,0,0);
+}
+.scene .shadow-layer .select-box .select-anchor {
+  display: none;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 5px;
+}
+.scene .shadow-layer-select-mode {
+  cursor: move;
+}
+.scene .shadow-layer-select-mode .select-box:hover {
+  background: rgba(0,0,0,0);
+}
+.scene .shadow-layer-select-mode .select-box:hover .select-anchor {
+  display: block;
+  background: #00f;
+}
+.scene .shadow-layer-select-mode .select-box-active .select-anchor {
+  display: block;
+  background: #000;
+}
+.scene .shadow-layer-select-mode .select-box-active .note-select-box-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,255,0.4);
+}
+.scene .shadow-layer-select-mode .select-box-active .focus-select-box-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,255,0.4);
+}
+.scene .shadow-layer-select-mode .note-select-box:hover {
+  background: rgba(0,0,255,0.4);
+}
+.scene .shadow-layer-select-mode .textarrow-select-box.select-box-active {
+  background: rgba(0,0,255,0.4);
+}
+.scene .input-layer .text-input {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.4);
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+.setting-pannel-dropdown #setting_pannels {
+  display: none;
+  position: fixed;
+  right: 0px;
+  width: 230px;
+  transition: top 0.3s ease-in-out;
+  z-index: 0;
+}
+.setting-pannel-dropdown.open .menu-btn-setting {
+  background-color: #000;
+}
+.setting-pannel-dropdown.open #setting_pannels {
+  display: block;
+  top: 41px;
+}
+#pannels_inner {
+  background: #f00;
+  padding-left: 10px;
+  padding: 8px 10px;
+  background-color: #999;
+  position: relative;
+}
+.setting-wrapper {
+  border-color: #000;
+  border-radius: 0px;
+  background: #eee;
+}
+.color-picker-wrapper {
+  height: auto;
+}
+.expand-color-pick-wrapper {
+  height: 180px;
+}
+.compass {
+  width: 90px;
+  height: 75px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  background: #000;
+  background-color: rgba(0,0,0,0.3);
+  transition: right 0.3s, bottom 0.3s;
+}
+.compass .toggle-compass {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 6px solid #000;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+}
+.compass .compass-btn {
+  position: absolute;
+  cursor: pointer;
+}
+.compass .compass-btn-0 {
+  background-image: url("../img/icons.png");
+  background-position: 0px -32px;
+  width: 16px;
+  height: 16px;
+}
+.compass .compass-btn-1 {
+  background-image: url("../img/icons.png");
+  background-position: 0px -64px;
+  width: 16px;
+  height: 16px;
+}
+.compass .compass-btn-2 {
+  background-image: url("../img/icons.png");
+  background-position: 0px -48px;
+  width: 16px;
+  height: 16px;
+}
+.compass .compass-btn-3 {
+  background-image: url("../img/icons.png");
+  background-position: 0px 0px;
+  width: 16px;
+  height: 16px;
+}
+.compass .compass-btn-4 {
+  background-image: url("../img/icons.png");
+  background-position: 0px -16px;
+  width: 16px;
+  height: 16px;
+}
+.compass .compass-btn-zoom {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+.compass .compass-btn-zoomin {
+  background-image: url("../img/icons.png");
+  background-position: 0px -80px;
+  width: 16px;
+  height: 16px;
+}
+.compass .compass-btn-zoomout {
+  background-image: url("../img/icons.png");
+  background-position: 0px -96px;
+  width: 16px;
+  height: 16px;
+}
+.compass-hide {
+  background-color: rgba(0,0,0,0);
+  right: -78px;
+  bottom: -63px;
+}
+.compass-hide .toggle-compass {
+  border-color: #000;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
