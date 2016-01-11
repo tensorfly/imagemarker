@@ -8,7 +8,7 @@ Its function includes:
 
 1. measure the pixel distance between two points in an image, and mark the distance with segment.
 2. measure the position of a point in an image, and mark the (x, y) coordinate in the image.
-3. and text memos on the images
+3. add text memos on the images
 
 (With imagemagick, this marker support almost all image formats, even psd. )
 
