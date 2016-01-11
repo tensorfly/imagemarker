@@ -12,9 +12,11 @@ Its function includes:
 
 (With imagemagick, this marker support almost all image formats, even psd. )
 
-run the application execute:
+run the application by executing:
 
+```javascript
 forever start upload.js
 node app.js
+```
 
 
